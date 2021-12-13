@@ -41,7 +41,7 @@ public class CharController : MonoBehaviour
             player.velocity = new Vector2(0, player.velocity.y);
         }
 
-        if (Input.GetButtonDown("Jump") && isTouchingGround)
+        if (Input.GetButtonDown("Jump"))
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
         }
