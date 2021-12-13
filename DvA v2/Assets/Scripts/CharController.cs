@@ -15,26 +15,33 @@ public class CharController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask groundLayer;
     private bool isTouchingGround;
+    private bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
+
         player = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         direction = Input.GetAxis("Horizontal");
+        
 
-        if (direction > 0f)
+        if (direction > 0f && !facingRight)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            Flip();
         }
-        else if (direction < 0f)
+        else if (direction < 0f && facingRight)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            Flip();
         }
         else
         {
@@ -45,5 +52,18 @@ public class CharController : MonoBehaviour
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
         }
+
+        transform.position += new Vector3(direction, 0, 0) * Time.deltaTime * speed;
     }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
+
 }
