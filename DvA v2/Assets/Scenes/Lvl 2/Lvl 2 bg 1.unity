@@ -611,10 +611,11 @@ MonoBehaviour:
   speed: 3
   jumpSpeed: 8
   groundCheck: {fileID: 348201021}
-  groundCheckRadius: 0
-  groundLayer:
+  groundCheckRadius: 0.2
+  platformsLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
+  animator: {fileID: 684321102}
 --- !u!61 &684321100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -654,7 +655,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 2
-  m_LinearDrag: 0
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 2
   m_Material: {fileID: 0}
