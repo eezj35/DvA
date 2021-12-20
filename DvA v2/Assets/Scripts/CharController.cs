@@ -19,7 +19,7 @@ public class CharController : MonoBehaviour
     public float groundCheckRadius;
     private bool isGrounded;
     public LayerMask platformsLayerMask;
-    private bool facingRight = true;
+    public bool facingRight = true;
 
     public Animator animator;
 
