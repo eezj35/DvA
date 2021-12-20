@@ -7826,7 +7826,7 @@ PrefabInstance:
         type: 3}
       propertyPath: charToSpawn
       value: 
-      objectReference: {fileID: 4985156062690122258, guid: 71d4792e9b2bfab4bb0da5b8b853e707,
+      objectReference: {fileID: 7346574305268372010, guid: 838e195db20648b48b5b466f185ea4bc,
         type: 3}
     - target: {fileID: 3173207622129310739, guid: 941893804d718244b873f1dc52ab7e24,
         type: 3}
@@ -7846,12 +7846,14 @@ PrefabInstance:
     - target: {fileID: 3173207622129310739, guid: 941893804d718244b873f1dc52ab7e24,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18
+
+      value: -18.73
+
       objectReference: {fileID: 0}
     - target: {fileID: 3173207622129310739, guid: 941893804d718244b873f1dc52ab7e24,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2405992
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3173207622129310739, guid: 941893804d718244b873f1dc52ab7e24,
         type: 3}
