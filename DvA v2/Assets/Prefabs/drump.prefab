@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4959d165fd2eb4d821667fb80c3573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCooldown: 0.2
   firePoint: {fileID: 7569245027374309919}
   fireballs: []
 --- !u!50 &7569245028153651623
