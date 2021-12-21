@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6073175566146871885}
   - component: {fileID: 7725279949202034551}
   - component: {fileID: 7851059904182030587}
-  - component: {fileID: 2148026198804443019}
   - component: {fileID: 2300891638549666653}
   m_Layer: 13
   m_Name: Blue Heart
@@ -50,6 +49,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -342,19 +342,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &2148026198804443019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888700273374117731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424e59195de25054f918e1a8d0a880dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthCollect: {fileID: 8300000, guid: 98cd58cec7b2585499baae8964f8c21c, type: 3}
 --- !u!82 &2300891638549666653
 AudioSource:
   m_ObjectHideFlags: 0
