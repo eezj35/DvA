@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    // givenDamage is any number from 1 to 10. value 1 means one health heart gone
     public void TakeDamage(float givenDamage)
     {
         currentHealth = Mathf.Clamp(currentHealth - givenDamage, 0, startHealth);
