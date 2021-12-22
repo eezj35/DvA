@@ -35,6 +35,11 @@ public class Health : MonoBehaviour
         }
     }
 
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+    }
+
     // Test function
     private void Update()
     {
