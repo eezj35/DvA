@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float startHealth;
     public float currentHealth;
     private Animator anim;
+    private bool isDead;
 
     private void Awake()
     {
@@ -23,10 +24,17 @@ public class Health : MonoBehaviour
         }
         else
         {
-            anim.SetTrigger("die");
+            if (!isDead)
+            {
+                anim.SetTrigger("die");
+                GetComponent<CharController>().enabled = false;
+                isDead = true;
+            }
+            
         }
     }
 
+    //Test function
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
