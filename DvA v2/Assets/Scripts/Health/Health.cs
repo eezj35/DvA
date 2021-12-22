@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    //Test function
+    // Test function
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
