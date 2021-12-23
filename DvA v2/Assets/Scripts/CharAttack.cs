@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CharAttack : MonoBehaviour
 {
+    [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] fireballs;
+    private float cooldownTimer = Mathf.Infinity;
 
     private Animator anim;
     private CharController charController;
@@ -19,15 +21,19 @@ public class CharAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && (cooldownTimer > attackCooldown))
         {
             Shoot();
         }
+
+        cooldownTimer += Time.deltaTime;
     }
 
     void Shoot()
     {
         anim.SetTrigger("attack");
+        cooldownTimer = 0;
+
         float localScaleX = firePoint.localScale.x;
         if (!charController.facingRight)
         {
