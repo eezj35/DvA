@@ -49,4 +49,9 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void AddHealth(float givenValue)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + givenValue, 0, startHealth);
+    }
+
 }
