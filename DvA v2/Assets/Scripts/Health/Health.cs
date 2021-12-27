@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.buildIndex == 0)
+        if (scene.buildIndex % 2 == 0)
         {
             currentHealth = startHealth;
         }
