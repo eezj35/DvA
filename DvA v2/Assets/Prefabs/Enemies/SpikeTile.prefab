@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4153845571215828249}
   - component: {fileID: 4153845571215828248}
   - component: {fileID: 8012101582172933532}
+  - component: {fileID: 7513227619563866261}
   m_Layer: 0
   m_Name: SpikeTile
   m_TagString: Untagged
@@ -94,7 +95,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -129,4 +130,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 7
+--- !u!114 &7513227619563866261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153845571215828251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9c21c3d0014c448815cfe6f3aed6e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageValue: 1
