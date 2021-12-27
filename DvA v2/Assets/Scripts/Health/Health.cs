@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private float startHealth;
-    public float currentHealth;
+    [SerializeField] public float startHealth;
+    public static float currentHealth;
     private Animator anim;
     private bool isDead;
 
     private void Awake()
     {
-        currentHealth = startHealth;
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.buildIndex == 0)
+        {
+            currentHealth = startHealth;
+        }
+        
         anim = GetComponent<Animator>();
     }
 
