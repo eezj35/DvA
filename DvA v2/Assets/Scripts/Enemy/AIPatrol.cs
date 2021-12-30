@@ -11,6 +11,7 @@ public class AIPatrol : MonoBehaviour
     public Transform groundCheckPos;
     public LayerMask groundLayer;
     public LayerMask collectableLayer;
+    public LayerMask playerLayer;
     public Collider2D bodyCollider;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +39,7 @@ public class AIPatrol : MonoBehaviour
 
     void Patrol()
     {
-        if (mustFlip == true || bodyCollider.IsTouchingLayers(groundLayer))
+        if (mustFlip == true || bodyCollider.IsTouchingLayers(collectableLayer) || bodyCollider.IsTouchingLayers(playerLayer))
         {
             Flip();
         }

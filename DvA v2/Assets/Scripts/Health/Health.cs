@@ -47,13 +47,13 @@ public class Health : MonoBehaviour
     }
 
     // Test function
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        TakeDamage(1);
+    //    }
+    //}
 
     public void AddHealth(float givenValue)
     {
