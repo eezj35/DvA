@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] public float startHealth;
+    public GameOver gameOver;
     public static float currentHealth;
     private Animator anim;
     private bool isDead;
+    public int score = 0;
+    public float delay = 1f;
 
     private void Awake()
     {
@@ -36,8 +39,9 @@ public class Health : MonoBehaviour
                 anim.SetTrigger("die");
                 GetComponent<CharController>().enabled = false;
                 isDead = true;
+                gameOver.Setup(score);
+
             }
-            
         }
     }
 
