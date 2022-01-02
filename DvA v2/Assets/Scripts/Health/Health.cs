@@ -11,7 +11,6 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool isDead;
     public int score = 0;
-    public float delay = 1f;
 
     private void Awake()
     {

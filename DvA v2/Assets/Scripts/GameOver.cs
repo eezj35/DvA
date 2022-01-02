@@ -16,11 +16,12 @@ public class GameOver : MonoBehaviour
     public void Setup(int score)
     {
         gameObject.SetActive(true);
-        pointsText.text = score.ToString();
+        pointsText.text = "Score: " + score.ToString();
     }
 
     public void RestartButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Health.currentHealth = 10;
     }
 }
