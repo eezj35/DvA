@@ -11,7 +11,6 @@ public class LevelLoader : MonoBehaviour
         if (collision.tag == "Player")
         {
             LoadNextLevel();
-        
         }
     }
 
